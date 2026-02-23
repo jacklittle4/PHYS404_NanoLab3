@@ -23,9 +23,6 @@ Course: PHYS404 (Advanced Nanophysics Lab)
 - task_c_efficiency_fit.wl  
   Final Wolfram Language script for nonlinear fitting of diffraction efficiency.
 
-- aom_efficiency_fit.wl  
-  Earlier refinement script used for efficiency model testing.
-
 ---
 
 # Task B — Deflection Angle vs RF Frequency
