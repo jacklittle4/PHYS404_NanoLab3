@@ -1,3 +1,6 @@
+(*This is the original task B plot, it serves no real purpose here other
+than for seeing the base framework*)
+
 ClearAll["Global`*"];
 
 prfEta = {{0.0324, 0.277672201}, {0.0576, 0.280836531}, {0.093025, 
@@ -34,3 +37,4 @@ Show[ListPlot[prfEta, Frame -> True,
    PlotRange -> {{0, pMax}, {0, 1}}, PlotMarkers -> {Automatic, 10}], 
  Plot[fit[p], {p, 0, pMax}, PlotStyle -> {Red, Thick}], 
  PlotLabel -> Style["Diffraction Efficiency vs RF Power (AOM)", 15]]
+
