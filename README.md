@@ -28,7 +28,3 @@ Where:
    - print the best-fit \(P_\pi\),
    - print the fit quality \(R^2\),
    - display data points and the fitted curve.
-
-## Notes
-
-- The script keeps your original dataset and model, but improves naming, readability, and output clarity.
