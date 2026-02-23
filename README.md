@@ -1,53 +1,34 @@
 # PHYS404 Nano Lab 3
 
-Analysis files for **Task B** and **Task C** of the acousto-optic modulator (AOM) lab.
+This repository contains a Wolfram Language analysis for fitting **AOM diffraction efficiency** as a function of RF drive power.
 
-## Repository contents
+## What is included
 
-- `task_b_deflection_fit.wl`
-  Final Wolfram Language script for Task B (deflection angle vs RF frequency).
-- `task_c_efficiency_fit.wl`
-  Final Wolfram Language script for Task C (diffraction efficiency vs RF power).
-- `aom_efficiency_fit.wl`
-  Compatibility wrapper that runs Task C.
-- `LAB_REPORT_TASK_BC.md`
-  Cleaned lab-report text for Task B and Task C.
-- `PHYS404-Lab3-Little.nb`
-  Original notebook used during lab development.
-- `LICENSE`
-  MIT License.
-- `.gitignore`
-  Ignore rules for Wolfram/editor temporary files.
+- `aom_efficiency_fit.wl` — cleaned and documented analysis script.
+- `PHYS404-Lab3-Little.nb` — original notebook work.
 
-## Task B model
+## Model used
 
-For Bragg diffraction in an AOM,
+The fit assumes:
 
 \[
-\theta \approx \frac{\lambda f_{RF}}{v_{ac}}
+\eta = \sin^2\left(\frac{\pi}{2}\sqrt{\frac{P_{RF}}{P_\pi}}\right)
 \]
 
-The script performs two fits:
-1. \(\theta = mf + b\)
-2. \(\theta = mf\) (forced through origin)
-
-Then computes acoustic velocity from \(v_{ac} = \lambda/m\).
-
-## Task C model
-
-At fixed RF frequency (80 MHz), diffraction efficiency is modeled as:
-
-\[
-\eta(P_{RF}) = \eta_0 + A\sin^2\left(\frac{\pi}{2}\sqrt{\frac{P_{RF}}{P_\pi}}\right)
-\]
-
-The script estimates \(P_\pi\), \(\eta_0\), \(A\), and \(R^2\).
+Where:
+- \(\eta\) is diffraction efficiency,
+- \(P_{RF}\) is RF power,
+- \(P_\pi\) is the fitted characteristic power scale.
 
 ## How to run
 
-From Mathematica/Wolfram Engine:
+1. Open Wolfram Mathematica or Wolfram Engine.
+2. Run `aom_efficiency_fit.wl`.
+3. The script will:
+   - print the best-fit \(P_\pi\),
+   - print the fit quality \(R^2\),
+   - display data points and the fitted curve.
 
-- Run Task B: `Get["task_b_deflection_fit.wl"]`
-- Run Task C: `Get["task_c_efficiency_fit.wl"]`
+## Notes
 
-Each script prints fitted parameters and displays the corresponding plot.
+- The script keeps your original dataset and model, but improves naming, readability, and output clarity.

@@ -1,12 +1,13 @@
 # Wolfram/Mathematica artifacts
 *.mx
+*.m
 *.wlc
 
-# Notebook autosaves and temporary files
+# Notebook autosaves and temp files
 *.nb~
 *.tmp
 
-# Editor and OS files
+# OS/editor files
 .DS_Store
 Thumbs.db
 *.swp
